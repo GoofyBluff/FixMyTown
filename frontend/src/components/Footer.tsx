@@ -20,7 +20,7 @@ const Footer = () => {
                 />
               </div>
               <h3 className="text-lg font-bold text-foreground">
-                CivicIssueReporter
+                FixMyTown
               </h3>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-xs">
@@ -117,7 +117,7 @@ const Footer = () => {
               {[
                 {
                   icon: Mail,
-                  text: "support@civicreport.com",
+                  text: "support@fixmytown.com",
                 },
                 {
                   icon: Phone,
@@ -156,7 +156,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t mt-12 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CivicIssueReporter. All rights
+            © {new Date().getFullYear()} FixMyTown. All rights
             reserved. Building better communities together.
           </p>
         </div>

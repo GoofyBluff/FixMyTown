@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button.tsx";
 import { LogIn, LogOut, Shield, LayoutDashboard } from "lucide-react";
-import civicIssueLogo from "../assets/civic-issue.png";
+import logo from "../assets/logo.png"
 import { useAuth } from "../contexts/AuthContext.tsx";
 
 const Header: React.FC = () => {
@@ -23,14 +23,14 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
             <div className="flex items-center justify-center w-[50px] h-[50px] rounded-lg overflow-hidden">
-              <img src={civicIssueLogo} alt="Civic Issue Logo" className="object-contain" />
+              <img src={logo} alt="Civic Issue Logo" className="object-contain" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">
-                CivicIssueReporter
+                FixMyTown
               </h1>
               <p className="text-xs text-muted-foreground">
-                Building Better Communities
+                Together for a Better City
               </p>
             </div>
           </Link>

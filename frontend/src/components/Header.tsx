@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button.tsx";
 import { LogIn, LogOut, Shield, User } from "lucide-react";
-import civicIssueLogo from "../assets/civic-issue.png";
+// import civicIssueLogo from "../assets/civic-issue.png";
+import logo from "../assets/logo.png"
 import { useAuth } from "../contexts/AuthContext.tsx";
 import { handleSupportClick } from "./SupportModel.tsx";
 
@@ -43,17 +44,17 @@ const Header: React.FC<HeaderProps> = ({
           >
             <div className="w-10 h-10 rounded-lg overflow-hidden">
               <img
-                src={civicIssueLogo}
+                src={logo}
                 alt="Civic Issue Logo"
                 className="w-full h-full object-contain"
               />
             </div>
             <div>
               <h1 className="text-lg font-bold text-foreground leading-tight">
-                CivicIssueReporter
+                FixMyTown
               </h1>
               <p className="text-xs text-muted-foreground">
-                Building Better Communities
+                Together for a Better City
               </p>
             </div>
           </Link>

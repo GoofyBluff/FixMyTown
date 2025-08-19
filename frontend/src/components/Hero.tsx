@@ -6,11 +6,12 @@ import { useAuth } from "../contexts/AuthContext";
 const Hero = () => {
   const { user } = useAuth();
 
-  const reportLink = user?.role === "citizen"
-    ? "/citizen/create-issue"
-    : user?.role === "admin"
-    ? "/admin"
-    : "/signin";
+  const reportLink =
+    user?.role === "citizen"
+      ? "/citizen/create-issue"
+      : user?.role === "admin"
+      ? "/admin"
+      : "/signin";
 
   const reportsPageLink = user?.role === "citizen" ? "/citizen" : "/admin";
 
@@ -18,7 +19,6 @@ const Hero = () => {
     <section className="relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-16 mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
           {/* Left: Text & CTA */}
           <div className="space-y-8 animate-slide-in-left">
             <div className="space-y-4">
@@ -26,10 +26,10 @@ const Hero = () => {
                 Report Issues,
                 <br />
                 <span className="text-white bg-clip-text civic-gradient px-2 rounded-lg">
-                  Transform
+                  Get Them
                 </span>
                 <br />
-                Your Community
+                Resolved
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
                 Help build safer, cleaner neighborhoods by reporting
@@ -79,8 +79,12 @@ const Hero = () => {
                 { value: "48h", label: "Avg Response" },
               ].map((stat, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="text-2xl font-bold text-sky-500">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-2xl font-bold text-sky-500">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -119,7 +123,9 @@ const Hero = () => {
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_2px_rgba(34,197,94,0.6)]" />
-                  <span className="text-sm font-medium text-gray-800">Issue Reported</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    Issue Reported
+                  </span>
                 </div>
               </div>
 
@@ -131,7 +137,9 @@ const Hero = () => {
               >
                 <div className="flex items-center space-x-3">
                   <Users className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium text-gray-800">Community Active</span>
+                  <span className="text-sm font-medium text-gray-800">
+                    Community Active
+                  </span>
                 </div>
               </div>
 
