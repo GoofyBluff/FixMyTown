@@ -6,11 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
+  visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
     transition: { delay: i * 0.12, duration: 0.6, ease: "easeOut" },
@@ -92,7 +92,7 @@ const Features = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              custom={index}
+              custom={index} // ✅ works with the function variant now
             >
               <Card className="backdrop-blur-md bg-white/70 border border-white/30 shadow-lg rounded-2xl p-6 ring-1 ring-white/20 transition-transform duration-300 hover:scale-[1.03] hover:shadow-xl">
                 <CardHeader>
